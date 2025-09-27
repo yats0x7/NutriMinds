@@ -46,6 +46,11 @@ function App() {
     setShowLoginModal(true);
   };
 
+  const handleSeeDemo = () => {
+    // Open the Google Drive demo link in a new tab
+    window.open('https://drive.google.com/file/d/19eBh71B7XOq3IBa_-9lmE1HDwBntJhwt/view?usp=drive_link', '_blank', 'noopener,noreferrer');
+  };
+
   const handleLoginSuccess = (userData) => {
     setUser(userData);
     setShowLoginModal(false);
@@ -102,7 +107,7 @@ function App() {
   return (
     <div className="App">
       {currentView === "landing" && (
-        <Landing onGetHealthy={handleGetHealthyClick} />
+        <Landing onGetHealthy={handleGetHealthyClick} onSeeDemo={handleSeeDemo} />
       )}
 
       {currentView === "activity-level" && user && (
