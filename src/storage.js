@@ -12,6 +12,16 @@ const defaultUser = {
   username: "",
   email: "",
   dailyCalories: 2200,
+  activityLevel: null,
+  age: null,
+  weight: null,
+  weightUnit: "kg",
+  height: null,
+  heightUnit: "cm",
+  feet: null,
+  inches: null,
+  bmi: null,
+  bmiCategory: null,
   totalXP: 0,
   currentLevel: 1,
   badges: [],
@@ -235,6 +245,49 @@ export const updateStreak = (user) => {
   return { streak: newStreak, lastHealthyDate: newLastHealthyDate };
 };
 
+// BMI calculation functions
+export const calculateBMI = (weight, height, weightUnit = "kg", heightUnit = "cm") => {
+  // Convert weight to kg if needed
+  let weightInKg = weight;
+  if (weightUnit === "lb") {
+    weightInKg = weight / 2.20462;
+  }
+
+  // Convert height to meters if needed
+  let heightInM = height;
+  if (heightUnit === "cm") {
+    heightInM = height / 100;
+  } else if (heightUnit === "ft") {
+    // height is already in meters if coming from ft-inches conversion
+    heightInM = height / 100;
+  }
+
+  // Calculate BMI: weight(kg) / height(m)^2
+  const bmi = weightInKg / (heightInM * heightInM);
+  return Math.round(bmi * 10) / 10; // Round to 1 decimal place
+};
+
+export const getBMICategory = (bmi) => {
+  if (bmi < 18.5) return "Underweight";
+  if (bmi < 25) return "Normal";
+  if (bmi < 30) return "Overweight";
+  return "Obese";
+};
+
+export const updateUserBMI = (user) => {
+  if (user.weight && user.height) {
+    const bmi = calculateBMI(user.weight, user.height, user.weightUnit, user.heightUnit);
+    const bmiCategory = getBMICategory(bmi);
+    
+    return {
+      ...user,
+      bmi,
+      bmiCategory
+    };
+  }
+  return user;
+};
+
 // Reset functions
 export const resetUserData = () => {
   const currentUser = getUser();
@@ -243,6 +296,16 @@ export const resetUserData = () => {
     username: currentUser.username,
     email: currentUser.email,
     dailyCalories: currentUser.dailyCalories,
+    activityLevel: currentUser.activityLevel,
+    age: currentUser.age,
+    weight: currentUser.weight,
+    weightUnit: currentUser.weightUnit,
+    height: currentUser.height,
+    heightUnit: currentUser.heightUnit,
+    feet: currentUser.feet,
+    inches: currentUser.inches,
+    bmi: currentUser.bmi,
+    bmiCategory: currentUser.bmiCategory,
   };
   saveUser(resetUser);
   return resetUser;

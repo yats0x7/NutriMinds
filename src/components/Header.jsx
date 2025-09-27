@@ -34,8 +34,16 @@ const Header = ({ user, onProfileClick, onBackToLanding }) => {
             <span className="welcome-text">
               Welcome back, <strong>{user.username}</strong>!
             </span>
+            {user.bmi && (
+              <div className="bmi-info">
+                <span className="bmi-label">BMI:</span>
+                <span className="bmi-value">{user.bmi}</span>
+                <span className={`bmi-category bmi-${user.bmiCategory?.toLowerCase()}`}>
+                  {user.bmiCategory}
+                </span>
+              </div>
+            )}
           </div>
-
 
           <button
             className="profile-button"
