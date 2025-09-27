@@ -1,0 +1,473 @@
+/* XP Bar Styles */
+.xp-bar-container {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.xp-bar-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 16px 16px 0 0;
+}
+
+/* Level Display */
+.level-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.level-number {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.level-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* XP Progress */
+.xp-progress {
+  margin-bottom: 16px;
+}
+
+.xp-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.current-xp {
+  color: #667eea;
+}
+
+.next-level {
+  color: #718096;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 6px;
+  position: relative;
+  transition: width 0.8s ease;
+  overflow: hidden;
+}
+
+.progress-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Streak Display */
+.streak-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.streak-icon {
+  font-size: 24px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.streak-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.streak-number {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* XP Animation */
+.xp-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.xp-popup {
+  background: linear-gradient(135deg, #51cf66, #40c057);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(81, 207, 102, 0.4);
+  animation: xpBounce 2s ease-out forwards;
+}
+
+@keyframes xpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1);
+  }
+  60% {
+    transform: translateY(-15px) scale(1.05);
+  }
+  80% {
+    transform: translateY(-5px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+}
+
+/* Badge Animation */
+.badge-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.badge-popup {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #2d3748;
+  padding: 16px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  animation: badgeCelebration 3s ease-out forwards;
+  margin-bottom: 8px;
+}
+
+.badge-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  animation: spin 1s ease-in-out;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.badge-name {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+@keyframes badgeCelebration {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5) rotate(-10deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1.1) rotate(5deg);
+  }
+  40% {
+    transform: translateY(-20px) scale(1) rotate(-2deg);
+  }
+  60% {
+    transform: translateY(-25px) scale(1.05) rotate(1deg);
+  }
+  80% {
+    transform: translateY(-10px) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  43% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xp-bar-container {
+    padding: 16px;
+  }
+
+  .level-number {
+    font-size: 20px;
+  }
+
+  .badge {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .xp-info {
+    font-size: 13px;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+
+  .streak-display {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .streak-icon {
+    font-size: 20px;
+  }
+
+  .streak-number {
+    font-size: 18px;
+  }
+
+  .streak-label {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .xp-bar-container {
+    padding: 12px;
+  }
+
+  .level-display {
+    margin-bottom: 12px;
+  }
+
+  .level-number {
+    font-size: 18px;
+  }
+
+  .badge {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .xp-info {
+    font-size: 12px;
+  }
+
+  .progress-bar {
+    height: 8px;
+  }
+
+  .streak-display {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .streak-icon {
+    font-size: 18px;
+  }
+
+  .streak-number {
+    font-size: 16px;
+  }
+
+  .streak-label {
+    font-size: 10px;
+  }
+
+  .xp-popup {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .badge-popup {
+    padding: 12px 16px;
+  }
+
+  .badge-icon {
+    font-size: 24px;
+  }
+
+  .badge-text {
+    font-size: 12px;
+  }
+
+  .badge-name {
+    font-size: 10px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .xp-bar-container {
+    border: 2px solid #000;
+  }
+
+  .xp-bar-container::before {
+    background: #000;
+  }
+
+  .level-number {
+    color: #000;
+    -webkit-text-fill-color: #000;
+  }
+
+  .badge {
+    border: 2px solid #000;
+  }
+
+  .progress-fill {
+    background: #000;
+  }
+
+  .streak-display {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill {
+    transition: none;
+  }
+
+  .progress-glow {
+    animation: none;
+  }
+
+  .streak-icon {
+    animation: none;
+  }
+
+  .xp-popup {
+    animation: none;
+  }
+
+  .badge-popup {
+    animation: none;
+  }
+
+  .badge-icon {
+    animation: none;
+  }
+
+  .badge:hover {
+    transform: none;
+  }
+}

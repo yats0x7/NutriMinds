@@ -1,0 +1,501 @@
+/* Charts Styles */
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chart-content {
+  padding: 16px 0;
+}
+
+/* Empty Chart State */
+.empty-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #718096;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Macro Chart */
+.macro-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.center-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.center-label {
+  font-size: 10px;
+  color: #718096;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chart-slices {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 50%,
+    50% 0%,
+    calc(
+        50% + 50% *
+          cos(calc(var(--offset) * 3.6deg + var(--percentage) * 3.6deg))
+      )
+      calc(
+        50% - 50% *
+          sin(calc(var(--offset) * 3.6deg + var(--percentage) * 3.6deg))
+      ),
+    50% 50%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.protein-slice {
+  background: conic-gradient(
+    from calc(var(--offset) * 3.6deg) at 50% 50%,
+    #667eea 0deg,
+    #667eea calc(var(--percentage) * 3.6deg),
+    transparent calc(var(--percentage) * 3.6deg)
+  );
+}
+
+.carbs-slice {
+  background: conic-gradient(
+    from calc(var(--offset) * 3.6deg) at 50% 50%,
+    #48bb78 0deg,
+    #48bb78 calc(var(--percentage) * 3.6deg),
+    transparent calc(var(--percentage) * 3.6deg)
+  );
+}
+
+.fat-slice {
+  background: conic-gradient(
+    from calc(var(--offset) * 3.6deg) at 50% 50%,
+    #ed8936 0deg,
+    #ed8936 calc(var(--percentage) * 3.6deg),
+    transparent calc(var(--percentage) * 3.6deg)
+  );
+}
+
+.slice-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.slice-value {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Weekly Chart */
+.weekly-chart {
+  padding: 16px 0;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 120px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+}
+
+.bar-container {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 100px;
+  width: 100%;
+  max-width: 40px;
+}
+
+.calories-bar {
+  flex: 1;
+  background: linear-gradient(to top, #667eea, #764ba2);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: all 0.3s ease;
+}
+
+.xp-bar {
+  flex: 1;
+  background: linear-gradient(to top, #51cf66, #40c057);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: all 0.3s ease;
+}
+
+.bar-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a5568;
+  text-align: center;
+}
+
+.bar-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 9px;
+  color: #718096;
+}
+
+.calories-value {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.xp-value {
+  font-weight: 600;
+  color: #51cf66;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.calories-color {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.xp-color {
+  background: linear-gradient(135deg, #51cf66, #40c057);
+}
+
+/* Target Progress */
+.target-progress {
+  padding: 16px 0;
+}
+
+.target-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.target-current {
+  font-size: 32px;
+  font-weight: 800;
+  color: #667eea;
+  line-height: 1;
+}
+
+.target-separator {
+  font-size: 24px;
+  color: #a0aec0;
+  font-weight: 300;
+}
+
+.target-goal {
+  font-size: 24px;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.target-label {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
+}
+
+.target-bar {
+  width: 100%;
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.target-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 6px;
+  transition: width 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.target-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.target-percentage {
+  text-align: center;
+  font-size: 14px;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .macro-chart {
+    width: 160px;
+    height: 160px;
+  }
+
+  .center-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .center-value {
+    font-size: 14px;
+  }
+
+  .center-label {
+    font-size: 8px;
+  }
+
+  .slice {
+    font-size: 10px;
+  }
+
+  .slice-label {
+    font-size: 8px;
+  }
+
+  .slice-value {
+    font-size: 9px;
+  }
+
+  .chart-bars {
+    height: 100px;
+  }
+
+  .bar-container {
+    height: 80px;
+    max-width: 32px;
+  }
+
+  .bar-label {
+    font-size: 10px;
+  }
+
+  .bar-values {
+    font-size: 8px;
+  }
+
+  .target-current {
+    font-size: 28px;
+  }
+
+  .target-goal {
+    font-size: 20px;
+  }
+
+  .target-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .macro-chart {
+    width: 140px;
+    height: 140px;
+  }
+
+  .center-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .center-value {
+    font-size: 12px;
+  }
+
+  .center-label {
+    font-size: 7px;
+  }
+
+  .slice {
+    font-size: 9px;
+  }
+
+  .slice-label {
+    font-size: 7px;
+  }
+
+  .slice-value {
+    font-size: 8px;
+  }
+
+  .chart-bars {
+    height: 80px;
+  }
+
+  .bar-container {
+    height: 60px;
+    max-width: 28px;
+  }
+
+  .bar-label {
+    font-size: 9px;
+  }
+
+  .bar-values {
+    font-size: 7px;
+  }
+
+  .target-current {
+    font-size: 24px;
+  }
+
+  .target-goal {
+    font-size: 18px;
+  }
+
+  .target-label {
+    font-size: 11px;
+  }
+
+  .target-percentage {
+    font-size: 12px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .center-circle {
+    border-color: #000;
+  }
+
+  .calories-bar,
+  .xp-bar {
+    background: #000;
+  }
+
+  .target-fill {
+    background: #000;
+  }
+
+  .legend-color {
+    border: 1px solid #000;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .target-fill {
+    transition: none;
+  }
+
+  .target-fill::after {
+    animation: none;
+  }
+
+  .calories-bar,
+  .xp-bar {
+    transition: none;
+  }
+}

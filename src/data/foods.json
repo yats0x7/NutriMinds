@@ -1,0 +1,642 @@
+[
+  {
+    "dish": "Samosa",
+    "calories": 260,
+    "protein": 4,
+    "fat": 15,
+    "carbs": 30,
+    "healthScore": 20
+  },
+  {
+    "dish": "Dal Chawal",
+    "calories": 320,
+    "protein": 12,
+    "fat": 8,
+    "carbs": 50,
+    "healthScore": 75
+  },
+  {
+    "dish": "Rajma Chawal",
+    "calories": 380,
+    "protein": 18,
+    "fat": 10,
+    "carbs": 55,
+    "healthScore": 80
+  },
+  {
+    "dish": "Chole Bhature",
+    "calories": 520,
+    "protein": 15,
+    "fat": 25,
+    "carbs": 65,
+    "healthScore": 35
+  },
+  {
+    "dish": "Idli Sambar",
+    "calories": 180,
+    "protein": 8,
+    "fat": 3,
+    "carbs": 32,
+    "healthScore": 85
+  },
+  {
+    "dish": "Dosa",
+    "calories": 220,
+    "protein": 6,
+    "fat": 8,
+    "carbs": 35,
+    "healthScore": 70
+  },
+  {
+    "dish": "Upma",
+    "calories": 200,
+    "protein": 5,
+    "fat": 6,
+    "carbs": 35,
+    "healthScore": 65
+  },
+  {
+    "dish": "Poha",
+    "calories": 160,
+    "protein": 4,
+    "fat": 4,
+    "carbs": 30,
+    "healthScore": 70
+  },
+  {
+    "dish": "Paratha",
+    "calories": 300,
+    "protein": 8,
+    "fat": 12,
+    "carbs": 40,
+    "healthScore": 45
+  },
+  {
+    "dish": "Roti",
+    "calories": 80,
+    "protein": 3,
+    "fat": 1,
+    "carbs": 15,
+    "healthScore": 60
+  },
+  {
+    "dish": "Naan",
+    "calories": 320,
+    "protein": 8,
+    "fat": 8,
+    "carbs": 50,
+    "healthScore": 40
+  },
+  {
+    "dish": "Biryani",
+    "calories": 450,
+    "protein": 20,
+    "fat": 15,
+    "carbs": 55,
+    "healthScore": 50
+  },
+  {
+    "dish": "Fried Rice",
+    "calories": 280,
+    "protein": 8,
+    "fat": 8,
+    "carbs": 45,
+    "healthScore": 45
+  },
+  {
+    "dish": "Chicken Curry",
+    "calories": 250,
+    "protein": 25,
+    "fat": 12,
+    "carbs": 8,
+    "healthScore": 70
+  },
+  {
+    "dish": "Mutton Curry",
+    "calories": 300,
+    "protein": 28,
+    "fat": 18,
+    "carbs": 6,
+    "healthScore": 65
+  },
+  {
+    "dish": "Fish Curry",
+    "calories": 200,
+    "protein": 22,
+    "fat": 8,
+    "carbs": 5,
+    "healthScore": 80
+  },
+  {
+    "dish": "Paneer Butter Masala",
+    "calories": 320,
+    "protein": 15,
+    "fat": 20,
+    "carbs": 18,
+    "healthScore": 55
+  },
+  {
+    "dish": "Aloo Gobi",
+    "calories": 120,
+    "protein": 4,
+    "fat": 4,
+    "carbs": 20,
+    "healthScore": 75
+  },
+  {
+    "dish": "Palak Paneer",
+    "calories": 180,
+    "protein": 12,
+    "fat": 10,
+    "carbs": 12,
+    "healthScore": 85
+  },
+  {
+    "dish": "Mixed Vegetable Curry",
+    "calories": 100,
+    "protein": 3,
+    "fat": 3,
+    "carbs": 18,
+    "healthScore": 90
+  },
+  {
+    "dish": "Raita",
+    "calories": 60,
+    "protein": 3,
+    "fat": 2,
+    "carbs": 6,
+    "healthScore": 80
+  },
+  {
+    "dish": "Lassi",
+    "calories": 150,
+    "protein": 6,
+    "fat": 6,
+    "carbs": 20,
+    "healthScore": 70
+  },
+  {
+    "dish": "Jalebi",
+    "calories": 200,
+    "protein": 2,
+    "fat": 8,
+    "carbs": 35,
+    "healthScore": 15
+  },
+  {
+    "dish": "Gulab Jamun",
+    "calories": 180,
+    "protein": 3,
+    "fat": 6,
+    "carbs": 30,
+    "healthScore": 20
+  },
+  {
+    "dish": "Kheer",
+    "calories": 220,
+    "protein": 6,
+    "fat": 8,
+    "carbs": 35,
+    "healthScore": 40
+  },
+  {
+    "dish": "Halwa",
+    "calories": 300,
+    "protein": 4,
+    "fat": 12,
+    "carbs": 45,
+    "healthScore": 25
+  },
+  {
+    "dish": "Pakora",
+    "calories": 150,
+    "protein": 4,
+    "fat": 8,
+    "carbs": 18,
+    "healthScore": 30
+  },
+  {
+    "dish": "Vada",
+    "calories": 120,
+    "protein": 4,
+    "fat": 6,
+    "carbs": 15,
+    "healthScore": 35
+  },
+  {
+    "dish": "Sambar",
+    "calories": 80,
+    "protein": 3,
+    "fat": 2,
+    "carbs": 12,
+    "healthScore": 85
+  },
+  {
+    "dish": "Rasam",
+    "calories": 40,
+    "protein": 1,
+    "fat": 1,
+    "carbs": 8,
+    "healthScore": 90
+  },
+  {
+    "dish": "Curd Rice",
+    "calories": 200,
+    "protein": 6,
+    "fat": 4,
+    "carbs": 35,
+    "healthScore": 70
+  },
+  {
+    "dish": "Pulao",
+    "calories": 250,
+    "protein": 6,
+    "fat": 6,
+    "carbs": 45,
+    "healthScore": 60
+  },
+  {
+    "dish": "Khichdi",
+    "calories": 180,
+    "protein": 6,
+    "fat": 4,
+    "carbs": 30,
+    "healthScore": 80
+  },
+  {
+    "dish": "Pizza",
+    "calories": 300,
+    "protein": 12,
+    "fat": 12,
+    "carbs": 35,
+    "healthScore": 30
+  },
+  {
+    "dish": "Burger",
+    "calories": 350,
+    "protein": 15,
+    "fat": 18,
+    "carbs": 30,
+    "healthScore": 25
+  },
+  {
+    "dish": "French Fries",
+    "calories": 200,
+    "protein": 3,
+    "fat": 10,
+    "carbs": 25,
+    "healthScore": 20
+  },
+  {
+    "dish": "Sandwich",
+    "calories": 250,
+    "protein": 12,
+    "fat": 8,
+    "carbs": 30,
+    "healthScore": 50
+  },
+  {
+    "dish": "Pasta",
+    "calories": 280,
+    "protein": 10,
+    "fat": 6,
+    "carbs": 45,
+    "healthScore": 45
+  },
+  {
+    "dish": "Noodles",
+    "calories": 200,
+    "protein": 6,
+    "fat": 4,
+    "carbs": 35,
+    "healthScore": 40
+  },
+  {
+    "dish": "Momos",
+    "calories": 150,
+    "protein": 6,
+    "fat": 4,
+    "carbs": 22,
+    "healthScore": 55
+  },
+  {
+    "dish": "Spring Roll",
+    "calories": 120,
+    "protein": 4,
+    "fat": 6,
+    "carbs": 15,
+    "healthScore": 45
+  },
+  {
+    "dish": "Chow Mein",
+    "calories": 180,
+    "protein": 8,
+    "fat": 6,
+    "carbs": 25,
+    "healthScore": 50
+  },
+  {
+    "dish": "Fried Chicken",
+    "calories": 280,
+    "protein": 20,
+    "fat": 18,
+    "carbs": 8,
+    "healthScore": 35
+  },
+  {
+    "dish": "Chicken Wings",
+    "calories": 200,
+    "protein": 18,
+    "fat": 12,
+    "carbs": 4,
+    "healthScore": 40
+  },
+  {
+    "dish": "Tacos",
+    "calories": 180,
+    "protein": 8,
+    "fat": 8,
+    "carbs": 20,
+    "healthScore": 55
+  },
+  {
+    "dish": "Burrito",
+    "calories": 400,
+    "protein": 18,
+    "fat": 15,
+    "carbs": 45,
+    "healthScore": 45
+  },
+  {
+    "dish": "Salad",
+    "calories": 80,
+    "protein": 4,
+    "fat": 3,
+    "carbs": 12,
+    "healthScore": 95
+  },
+  {
+    "dish": "Caesar Salad",
+    "calories": 200,
+    "protein": 8,
+    "fat": 15,
+    "carbs": 8,
+    "healthScore": 70
+  },
+  {
+    "dish": "Fruit Salad",
+    "calories": 120,
+    "protein": 2,
+    "fat": 1,
+    "carbs": 30,
+    "healthScore": 90
+  },
+  {
+    "dish": "Smoothie",
+    "calories": 150,
+    "protein": 4,
+    "fat": 2,
+    "carbs": 30,
+    "healthScore": 85
+  },
+  {
+    "dish": "Green Smoothie",
+    "calories": 100,
+    "protein": 3,
+    "fat": 1,
+    "carbs": 20,
+    "healthScore": 95
+  },
+  {
+    "dish": "Protein Shake",
+    "calories": 200,
+    "protein": 25,
+    "fat": 3,
+    "carbs": 15,
+    "healthScore": 80
+  },
+  {
+    "dish": "Oatmeal",
+    "calories": 150,
+    "protein": 5,
+    "fat": 3,
+    "carbs": 27,
+    "healthScore": 85
+  },
+  {
+    "dish": "Cereal",
+    "calories": 120,
+    "protein": 4,
+    "fat": 2,
+    "carbs": 24,
+    "healthScore": 60
+  },
+  {
+    "dish": "Toast",
+    "calories": 80,
+    "protein": 3,
+    "fat": 1,
+    "carbs": 15,
+    "healthScore": 50
+  },
+  {
+    "dish": "Eggs",
+    "calories": 140,
+    "protein": 12,
+    "fat": 10,
+    "carbs": 1,
+    "healthScore": 80
+  },
+  {
+    "dish": "Omelette",
+    "calories": 180,
+    "protein": 14,
+    "fat": 12,
+    "carbs": 2,
+    "healthScore": 75
+  },
+  {
+    "dish": "Scrambled Eggs",
+    "calories": 160,
+    "protein": 12,
+    "fat": 11,
+    "carbs": 2,
+    "healthScore": 75
+  },
+  {
+    "dish": "Boiled Egg",
+    "calories": 70,
+    "protein": 6,
+    "fat": 5,
+    "carbs": 0,
+    "healthScore": 85
+  },
+  {
+    "dish": "Yogurt",
+    "calories": 100,
+    "protein": 6,
+    "fat": 3,
+    "carbs": 8,
+    "healthScore": 80
+  },
+  {
+    "dish": "Greek Yogurt",
+    "calories": 120,
+    "protein": 10,
+    "fat": 4,
+    "carbs": 6,
+    "healthScore": 85
+  },
+  {
+    "dish": "Cheese",
+    "calories": 100,
+    "protein": 7,
+    "fat": 8,
+    "carbs": 1,
+    "healthScore": 60
+  },
+  {
+    "dish": "Milk",
+    "calories": 80,
+    "protein": 4,
+    "fat": 3,
+    "carbs": 6,
+    "healthScore": 75
+  },
+  {
+    "dish": "Tea",
+    "calories": 5,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 1,
+    "healthScore": 70
+  },
+  {
+    "dish": "Coffee",
+    "calories": 5,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 1,
+    "healthScore": 70
+  },
+  {
+    "dish": "Green Tea",
+    "calories": 2,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "healthScore": 90
+  },
+  {
+    "dish": "Water",
+    "calories": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "healthScore": 100
+  },
+  {
+    "dish": "Coconut Water",
+    "calories": 20,
+    "protein": 1,
+    "fat": 0,
+    "carbs": 4,
+    "healthScore": 85
+  },
+  {
+    "dish": "Fresh Juice",
+    "calories": 120,
+    "protein": 1,
+    "fat": 0,
+    "carbs": 30,
+    "healthScore": 70
+  },
+  {
+    "dish": "Soda",
+    "calories": 140,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 35,
+    "healthScore": 10
+  },
+  {
+    "dish": "Energy Drink",
+    "calories": 110,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 27,
+    "healthScore": 15
+  },
+  {
+    "dish": "Chocolate",
+    "calories": 200,
+    "protein": 3,
+    "fat": 12,
+    "carbs": 25,
+    "healthScore": 20
+  },
+  {
+    "dish": "Ice Cream",
+    "calories": 150,
+    "protein": 3,
+    "fat": 8,
+    "carbs": 20,
+    "healthScore": 25
+  },
+  {
+    "dish": "Cake",
+    "calories": 300,
+    "protein": 4,
+    "fat": 12,
+    "carbs": 45,
+    "healthScore": 15
+  },
+  {
+    "dish": "Cookies",
+    "calories": 120,
+    "protein": 2,
+    "fat": 5,
+    "carbs": 18,
+    "healthScore": 20
+  },
+  {
+    "dish": "Chips",
+    "calories": 150,
+    "protein": 2,
+    "fat": 10,
+    "carbs": 15,
+    "healthScore": 15
+  },
+  {
+    "dish": "Nuts",
+    "calories": 180,
+    "protein": 6,
+    "fat": 15,
+    "carbs": 6,
+    "healthScore": 75
+  },
+  {
+    "dish": "Banana",
+    "calories": 90,
+    "protein": 1,
+    "fat": 0,
+    "carbs": 23,
+    "healthScore": 85
+  },
+  {
+    "dish": "Apple",
+    "calories": 80,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 21,
+    "healthScore": 90
+  },
+  {
+    "dish": "Orange",
+    "calories": 60,
+    "protein": 1,
+    "fat": 0,
+    "carbs": 15,
+    "healthScore": 90
+  }
+]
