@@ -11,20 +11,17 @@ all while working **completely offline** with `localStorage`.
 ## ✨ Features
 
 ### 🌟 Landing Page
-
 - Full-screen **animated hero** with food & wellness theme.
 - Smooth **CSS/SVG animations** (parallax, gradients, floating icons).
 - Bold **“Get Healthy!”** call-to-action.
 
 ### 🔐 Login & Profile
-
 - **Login modal** (no new page).
 - Collects: `username`, `email`, `dailyCalorieTarget`, `password (optional)`.
 - Data saved in `localStorage` → `foodLens:user`.
 - **Profile menu**: edit info, reset data, or logout.
 
 ### 📊 Dashboard
-
 - **Quick Log**: upload photo OR type dish name (works offline).
 - **Suggestions modal**: top-3 matches from local dataset (optional AI proxy).
 - **Today’s Log**: meals list with time, nutrition, XP earned.
@@ -33,7 +30,6 @@ all while working **completely offline** with `localStorage`.
 - **Badges panel**: milestone XP & streak achievements.
 
 ### 🎮 Gamification
-
 - XP = `healthScore ÷ 2` (rounded).
 - Levels every 100 XP.
 - Streak: +1 day if at least one meal has `healthScore ≥ 60`.
@@ -41,13 +37,11 @@ all while working **completely offline** with `localStorage`.
 - Fun **micro-animations** (+XP popups, smooth progress bar).
 
 ### 📂 Local Dataset
-
 - `foods.json` with 50–80 common Indian & fast-food dishes.
 - Users can add **custom dishes** (saved locally).
 - Offline-first design ensures demo works without internet.
 
 ### ⚡ Optional AI Vision
-
 - Hook to `/api/detect-food` (proxy server) for AI suggestions.
 - Predictions shown alongside local dataset matches.
 - Always falls back to typed input if offline.
@@ -105,57 +99,36 @@ foodLens:datasetVersion
 
 ## 🚀 Getting Started
 
-### 1️⃣ Install dependencies
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/your-username/foodlens.git
+cd foodlens
+```
 
+### 2️⃣ Install dependencies
 ```bash
 npm install
 ```
 
-### 2️⃣ Run the app
-
+### 3️⃣ Run locally
 ```bash
 npm run dev
 ```
 
 App runs at **`http://localhost:5173`** (default Vite port).
 
-### 3️⃣ Optional: AI Vision Proxy
-
-For AI-powered food detection from images:
-
-```bash
-cd proxy
-npm install
-npm start
-```
-
-Proxy runs at **`http://localhost:3001`** (optional).
-
 ---
 
 ## 🎮 Demo Script (Hackathon-ready)
 
-📖 **Full demo guide**: See [`demo.md`](demo.md) for detailed presentation script.
-
-### Quick Demo Flow (5 minutes)
-
-1. **Landing**: Show animated hero page → click "Get Healthy!"
-2. **Login**: Fill username, email, daily calories → submit
-3. **Dashboard**: Show XP bar, empty logs, charts
-4. **Text Input**: Type "Samosa" → select from suggestions → watch XP increase
-5. **Image Upload**: Upload food photo → AI suggestions (if proxy running) → log
-6. **Gamification**: Show XP bar, badges, streak counter
-7. **Profile**: Edit settings, view stats, reset data options
-8. **Charts**: Show macros pie chart, weekly overview, daily progress
-
-### Key Features to Highlight
-
-- ✨ **Smooth animations** and micro-interactions
-- 🎮 **Gamification** (XP, levels, badges, streaks)
-- 📱 **Responsive design** (try resizing browser)
-- 🔄 **Offline-first** (works without internet)
-- 🤖 **AI integration** (optional image detection)
-- 💾 **localStorage persistence** (data survives page reload)
+1. Open app → show animated landing page.  
+2. Click **Get Healthy!** → login modal → fill info.  
+3. Dashboard loads with user info (XP = 0).  
+4. Type `Samosa` → select → log → XP +10 → animated progress bar.  
+5. Upload a **salad photo** (if AI proxy enabled) → accept suggestion → log.  
+6. Show streak increment or badge unlock.  
+7. Open **Profile menu** → change daily calories → reload page → persistence shown.  
+8. Show **Reset Data** action → confirm → logs cleared, XP reset.  
 
 ---
 
@@ -176,9 +149,9 @@ src/
 ## 🔧 Optional AI Vision Proxy
 
 - Not required for core app.
-- If enabled: create `/proxy` folder with a small Express server.
-- Exposes `/api/detect-food` → forwards to AI Vision API (OpenAI/Gemini).
-- Configure `PROXY_URL` in `.env`.
+- If enabled: create `/proxy` folder with a small Express server.  
+- Exposes `/api/detect-food` → forwards to AI Vision API (OpenAI/Gemini).  
+- Configure `PROXY_URL` in `.env`.  
 
 📖 See [`proxy/README.md`](proxy/README.md) for setup.
 
@@ -186,23 +159,55 @@ src/
 
 ## 🏅 Badges & Levels
 
-- **XP milestones**: 50, 200, 500.
-- **Streak badge**: 7-day streak of healthy meals.
-- **Level formula**: `floor(totalXP / 100) + 1`.
+- **XP milestones**: 50, 200, 500.  
+- **Streak badge**: 7-day streak of healthy meals.  
+- **Level formula**: `floor(totalXP / 100) + 1`.  
 
 🎉 Micro-animations highlight new XP, badges, and streaks!
 
 ---
 
-## 📖 Notes
+## 📖 Documentation
 
-- App works **fully offline** using `foods.json` and `localStorage`.
-- Clear/reset localStorage anytime for fresh demo.
-- Edit `foods.json` to expand dataset.
+### 🔧 Setup Guide
+1. Install Node.js (>= 18).
+2. Clone repository and install dependencies with `npm install`.
+3. Run dev server using `npm run dev`.
+4. Access app locally at `http://localhost:5173`.
+5. To reset demo: clear `localStorage` keys `foodLens:user`, `foodLens:logs`, `foodLens:datasetVersion`.
+
+### 🏗 Architecture
+- **Landing Page** → animated hero screen with CTA.
+- **Login Modal** → collects user info and saves to `localStorage`.
+- **Dashboard** → core UI with logging, XP, charts, and badges.
+- **Profile Menu** → manage user data, reset, or logout.
+- **Storage Layer** → wrapper functions in `storage.js` for persistence.
+- **Dataset** → `foods.json` is the primary nutrition data source.
+
+### 🛠 Tools Used
+- **React + Vite** for fast SPA development.
+- **Tailwind CSS / custom CSS** for modern styling.
+- **Recharts or Canvas API** for lightweight charts.
+- **LocalStorage API** for persistence.
+- **Optional Node/Express proxy** for AI/ML integration.
+
+### 🤖 AI/ML Approach
+- **Offline-first:** The app uses a curated `foods.json` for 50–80 dishes.
+- **Typed Input Matching:** Local fuzzy search finds closest dishes.
+- **Optional Vision AI:** If enabled, a proxy server calls a model (OpenAI/Gemini) to detect dishes from images. Predictions merged into suggestions modal.
+- **Fallback Logic:** If AI confidence is low or offline, fallback to typed dataset suggestions.
+- **Gamification Metrics:** XP derived from `healthScore` (0–100) via formula `XP = healthScore ÷ 2`.
 
 ---
 
-## ❤️ Credits
+## ❤️ Credits & Authors
 
 Built with 🍎 **React + Vite**  
 Designed for health, wellness, and **fun gamification** ✨
+
+### 👩‍💻 Authors
+- **Author 1:** Tarunya Ksh
+- **Author 2:** [Add Name]
+- **Author 3:** [Add Name]
+- **Author 4:** [Add Name]
+
