@@ -85,6 +85,10 @@ const Dashboard = ({ user, onUserUpdate, onLogout, onBackToLanding }) => {
         setTimeout(() => setNewBadges([]), 3000);
       }
 
+      // Close the suggestions modal after successful food logging
+      setShowSuggestions(false);
+      setSuggestions([]);
+
       // Reload today's data
       loadTodaysData();
     } catch (error) {

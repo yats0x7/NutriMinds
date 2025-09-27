@@ -82,7 +82,7 @@ const UploadInput = ({ onFoodSelect, onShowSuggestions }) => {
   };
 
   const handleFileUpload = async (file) => {
-    if (!file) return;
+    if (!file || isUploading) return;
 
     setIsUploading(true);
 
@@ -185,6 +185,10 @@ const UploadInput = ({ onFoodSelect, onShowSuggestions }) => {
       onShowSuggestions(fallbackSuggestions);
     } finally {
       setIsUploading(false);
+      // Reset the file input to allow the same file to be selected again
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     }
   };
 
@@ -269,7 +273,7 @@ const UploadInput = ({ onFoodSelect, onShowSuggestions }) => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
+    if (file && !isUploading) {
       handleFileUpload(file);
     }
   };
@@ -290,7 +294,7 @@ const UploadInput = ({ onFoodSelect, onShowSuggestions }) => {
     setDragActive(false);
 
     const files = e.dataTransfer.files;
-    if (files && files[0]) {
+    if (files && files[0] && !isUploading) {
       handleFileUpload(files[0]);
     }
   };
