@@ -206,8 +206,8 @@ Built with 🍎 **React + Vite**
 Designed for health, wellness, and **fun gamification** ✨
 
 ### 👩‍💻 Authors
-- **Author 1:** Tarunya Ksh
-- **Author 2:** [Add Name]
-- **Author 3:** [Add Name]
-- **Author 4:** [Add Name]
+- **Author 1:** Tarunya Ksh [https://github.com/TarunyaProgrammer]
+- **Author 2:** Yatharth Katta
+- **Author 3:** Rakshit Yadav
+- **Author 4:** Payal Phougat
 
