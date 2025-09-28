@@ -208,6 +208,6 @@ Designed for health, wellness, and **fun gamification** ✨
 ### 👩‍💻 Authors
 - **Author 1:** Tarunya Ksh [https://github.com/TarunyaProgrammer]
 - **Author 2:** Yatharth Katta
-- **Author 3:** Rakshit Yadav
+- **Author 3:** Rakshit Yadav [https://github.com/rakshityadav1868]
 - **Author 4:** Payal Phougat
 
